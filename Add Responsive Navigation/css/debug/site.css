@@ -1,0 +1,214 @@
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+}
+
+body {
+    -ms-content-zooming: none;
+    overflow-x: hidden;
+    background-color: #9930b0;
+    color: #FFF;
+    letter-spacing: 0.02em;
+    font-size: 13px;
+    font-family: 'Segoe UI', 'Segoe WP', 'Open Sans', 'Lucida Grande', sans-serif;
+    line-height: 1.231;
+    -ms-content-zooming: none;
+    background-size: cover;
+}
+
+a, a:visited {
+    color: #eee;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+.site-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    color: #3a1b48;
+    background-color: #d575ff;
+}
+
+.site-header h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.main-content {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 35px;
+    overflow: hidden;
+}
+
+/* Header Navigation */
+
+.footer-nav, .main-nav {
+    display: none;
+    margin: auto;
+    width: 90%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.footer-nav {
+    display: block;
+    padding: 0 2%;
+}
+
+.main-nav > a, .main-nav > a:visited, .footer-nav > a, .footer-nav > a:visited {
+    background-color: #3a1b48;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    font-size: 1em;
+}
+
+.main-nav > a, .main-nav > a:visited {
+    margin: 5px 5px 20px 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.footer-nav > a, .footer-nav > a:visited {
+    width: 24%;
+}
+
+.nav-text {
+    float: left;
+    height: 32px;
+}
+
+.footer-nav .nav-text {
+    width: 100%;
+}
+
+.nav-icon {
+    display: none;
+    float: left;
+    width: 32px;
+    height: 32px;
+    background-image: url("http://images.professionalaspnet.com/nav-icons-32.png");
+    background-position-y: 0px;
+}
+
+.main-content {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+}
+
+/* End header Navigation */
+
+.footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 35px;
+    background-color: #3a1b48;
+    color: #fff;
+    /* for placeholder text */
+    text-align: center;
+}
+
+/* Scroll Magic */
+
+.xy-scroll-wrapper {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-style: none;
+    -ms-scroll-chaining: none;
+    -ms-scroll-snap-type: proximity;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: auto;
+    height: 100%;
+}
+
+
+
+@media (min-width:600px) {
+
+    .site-header h1 {
+        float: left;
+        width: auto;
+        margin-left: 20px;
+    }
+
+    .main-nav {
+        display: inline-block;
+        width: auto;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .main-content {
+        top: 80px;
+        bottom: 0;
+    }
+
+    .footer {
+        display: none;
+    }
+}
+
+@media (min-width:800px) {
+
+    .site-header {
+        height: 100px;
+        padding-left: 120px;
+    }
+
+    .site-header h1 {
+        font-size: 2.2em;
+        line-height: 100px;
+        margin-left: 0;
+    }
+
+    .main-nav {
+        width: auto;
+        height: 46px;
+        line-height: 46px;
+        margin-right: 20px;
+        margin-top: 25px;
+    }
+
+    .main-content {
+        top: 120px;
+        bottom: 0;
+        padding-left: 120px;
+    }
+
+    .xy-scroll-wrapper {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+}
