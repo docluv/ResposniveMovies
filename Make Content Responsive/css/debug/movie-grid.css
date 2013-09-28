@@ -1,4 +1,4 @@
-{
+.movie-poster-grid {
     overflow: hidden;
     padding: 0;
     height: 4000px;
@@ -87,7 +87,6 @@
         font-size: 1.5em;
         line-height: 80px;
     }
-
 
     .movie-target {
         width: 180px;
