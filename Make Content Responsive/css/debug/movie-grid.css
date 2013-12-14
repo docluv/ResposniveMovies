@@ -60,6 +60,14 @@
     }
 }
 
+@media (min-width:800px) {
+
+    .movie-poster-grid{
+        width: 4000px;
+        height: 600px;
+    }
+
+}
 
 @media (min-width: 1024px) {
 
@@ -111,12 +119,3 @@
 
 }
 
-
-@media (min-width:800px) {
-
-    .movie-poster-grid{
-        width: 4000px;
-        height: 600px;
-    }
-
-}

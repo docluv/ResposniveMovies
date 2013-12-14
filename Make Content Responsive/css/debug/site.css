@@ -166,7 +166,6 @@ h1 {
         display: inline-block;
         width: auto;
         float: right;
-        margin-right: 20px;
     }
 
     .main-content {
@@ -179,11 +178,17 @@ h1 {
     }
 }
 
+@media (min-width:630px) {
+    .main-nav {
+        margin-right: 20px;
+    }
+}
+
 @media (min-width:800px) {
 
     .site-header {
         height: 100px;
-        padding-left: 120px;
+        padding-left: 60px;
     }
 
     .site-header h1 {
@@ -203,12 +208,12 @@ h1 {
     .main-content {
         top: 120px;
         bottom: 0;
-        padding-left: 120px;
+        padding-left: 60px;
     }
 
     .xy-scroll-wrapper {
         overflow-x: scroll;
         overflow-y: hidden;
+        -ms-scroll-translation: vertical-to-horizontal;
     }
-
 }

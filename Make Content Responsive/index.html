@@ -25,7 +25,7 @@
 
                     <div class="movie-target">
                         <a href="#!movie/771193517/The Wolverine">
-                            <img alt="The Wolverine" src="http://content6.flixster.com/movie/11/17/25/11172568_pro.jpg" class="movie-grid-poster">
+                            <img class="movie-grid-poster" src="http://content6.flixster.com/movie/11/17/25/11172568_pro.jpg" alt="The Wolverine">
                             <figcaption class="photo-caption">The Wolverine</figcaption></a>
                     </div>
 
@@ -467,76 +467,49 @@
 
         <script>
 
-            var isAdjusting = false,
-                moviePosters = document.querySelectorAll(".movie-grid-poster"),
+            var moviePosters = document.querySelectorAll(".movie-grid-poster"),
                 curWidth = 0,
-                prevWidth = 0,
                 detBreakPoint = 600,
                 oriBreakPoint = 1024;
+            
+            window.matchMedia("(min-width: " + detBreakPoint + "px)").addListener(setPosterSrc);
 
-            window.addEventListener("resize", resizeHandler);
-
-            function resizeHandler() {
-
-                //avoid duplicating effort
-                if (isAdjusting) {
-                    return;
-                }
-
+            window.matchMedia("(min-width: " + oriBreakPoint + "px)").addListener(setPosterSrc);
+            
+            function setPosterSrc() {
+            
                 curWidth = window.innerWidth;
-
-                if (curWidth !== prevWidth) {
-
-                    if (curWidth < detBreakPoint && prevWidth > detBreakPoint) {
-                        //use the profile sized image
-                        setPosterSrc("pro");
-                    } else if (curWidth > detBreakPoint &&
-                        (prevWidth < oriBreakPoint || prevWidth < detBreakPoint)) {
-                        setPosterSrc("det");
-                    }
-
-                }
-
-            };
-
-            function setPosterSrc(srcType) {
-
-                isAdjusting = true;
-
+            
                 var i = 0,
                     moviePoster;
-
+            
                 for (i = 0; i < moviePosters.length; i++) {
-
+            
                     moviePoster = moviePosters[i];
-
+            
                     if (i === 0 && curWidth > oriBreakPoint) {
-
+            
                         moviePoster.src = moviePoster.src
                                             .replace("pro", "ori")
                                             .replace("det", "ori");
-
+            
                     } else if (curWidth > detBreakPoint) {
-
+            
                         moviePoster.src = moviePoster.src
                                             .replace("pro", "det")
                                             .replace("ori", "det");
-
+            
                     } else {
                         moviePoster.src = moviePoster.src.replace("ori", "pro")
-                                                            .replace("det", "pro")
-                                                            .replace("ori", "pro");
+                                                            .replace("det", "pro");
                     }
-
+            
                 }
-
-                isAdjusting = false;
-                prevWidth = window.innerWidth;
-
+            
             };
-
-            resizeHandler();
-
+            
+            setPosterSrc();
+            
         </script>
     </body>
 </html>

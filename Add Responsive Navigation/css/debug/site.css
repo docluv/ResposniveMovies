@@ -116,12 +116,6 @@ h1 {
     background-position-y: 0px;
 }
 
-.main-content {
-    position: absolute;
-    overflow: hidden;
-    left: 0;
-    right: 0;
-}
 
 /* End Navigation */
 
